@@ -16,4 +16,9 @@ export class InMemoryUnitRepository implements IUnitRepository {
     async findAll(): Promise<Unit[]> {
         return Array.from(this.units.values());
     }
+
+    async findByStatus(status: string): Promise<Unit[]> {
+        const allUnits = await this.findAll();
+        return allUnits.filter(unit => unit.status === status);
+    }
 }
