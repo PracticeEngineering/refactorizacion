@@ -4,4 +4,5 @@ export interface IUnitRepository {
     save(unit: Unit): Promise<void>;
     findById(id: string): Promise<Unit | null>;
     findAll(): Promise<Unit[]>;
+    findByStatus(status: string): Promise<Unit[]>;
 }
