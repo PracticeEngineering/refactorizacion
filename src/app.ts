@@ -1,9 +1,10 @@
+import { v4 } from "uuid";
 // app.ts
 class CheckpointManager {
     checkpoints: any[] = [];
     createCheckpoint(unitId: string, status: string, timestamp: Date) {
         this.checkpoints.push({
-            id: Math.random().toString(),
+            id: v4(),
             unitId,
             status,
             timestamp: timestamp.toISOString(),
