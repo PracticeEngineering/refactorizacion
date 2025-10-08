@@ -4,10 +4,10 @@ import { CreateCheckpointController } from '../controllers/CreateCheckpointContr
 import { GetHistoryByUnitIdController } from '../controllers/GetHistoryByUnitIdController.js';
 import { validate } from '../middlewares/ValidationMiddleware.js';
 import { createCheckpointSchema, getHistorySchema } from '../validators/CheckpointValidator.js';
-import { CreateCheckpointUseCase } from '../../../application/use-cases/CreateCheckpointUseCase.js';
-import { GetHistoryByUnitIdUseCase } from '../../../application/use-cases/GetHistoryByUnitIdUseCase.js';
-import { InMemoryCheckpointRepository } from '../../../infrastructure/repositories/InMemoryCheckpointRepository.js';
-import { InMemoryUnitRepository } from '../../../infrastructure/repositories/InMemoryUnitRepository.js';
+import { CreateCheckpointUseCase } from '../../application/use-cases/CreateCheckpointUseCase.js';
+import { GetHistoryByUnitIdUseCase } from '../../application/use-cases/GetHistoryByUnitIdUseCase.js';
+import { InMemoryCheckpointRepository } from '../../infrastructure/repositories/InMemoryCheckpointRepository.js';
+import { InMemoryUnitRepository } from '../../infrastructure/repositories/InMemoryUnitRepository.js';
 
 const router = Router();
 

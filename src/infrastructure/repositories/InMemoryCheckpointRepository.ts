@@ -1,5 +1,5 @@
 import { Checkpoint } from "../../domain/entities/Checkpoint.js";
-import { ICheckpointRepository } from "./ICheckpointRepository.js";
+import { ICheckpointRepository } from "../../domain/InterfacesRepositories/ICheckpointRepository.js";
 
 export class InMemoryCheckpointRepository implements ICheckpointRepository {
     private checkpoints: Map<string, Checkpoint> = new Map();

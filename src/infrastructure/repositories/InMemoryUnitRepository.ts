@@ -1,5 +1,5 @@
 import { Unit } from "../../domain/entities/Unit.js";
-import { IUnitRepository } from "./IUnitRepository.js";
+import { IUnitRepository } from "../../domain/InterfacesRepositories/IUnitRepository.js";
 
 export class InMemoryUnitRepository implements IUnitRepository {
     private units: Map<string, Unit> = new Map();
