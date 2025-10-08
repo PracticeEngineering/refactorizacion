@@ -1,6 +1,4 @@
 // app.ts
-import Fastify from "fastify";
-
 class CheckpointManager {
     checkpoints: any[] = [];
     createCheckpoint(unitId: string, status: string, timestamp: Date) {
@@ -38,7 +36,7 @@ class UnitStatusService {
     }
 }
 
-class TrackingAPI {
+export class TrackingAPI {
     checkpointManager = new CheckpointManager();
     unitService = new UnitStatusService();
     registerRoutes(app: any) {
@@ -59,13 +57,3 @@ class TrackingAPI {
         });
     }
 }
-
-const app = Fastify();
-const api = new TrackingAPI();
-api.registerRoutes(app);
-app.listen({ port: 3000 }, (err: any, address: string) => {
-    if (err) {
-        process.exit(1);
-    }
-    console.log(`Server running at ${address}`);
-});

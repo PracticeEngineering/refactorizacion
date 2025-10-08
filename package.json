@@ -1,20 +1,22 @@
 {
   "name": "refactorizacion",
   "version": "1.0.0",
-  "main": "app.ts",
+  "type": "module",
+  "main": "dist/app.js",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "fastify": "^5.6.1"
   },
   "devDependencies": {
     "@types/node": "^24.7.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3",
-    "ts-node-dev": "^2.0.0"
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
   },
   "scripts": {
-    "start": "ts-node app.ts",
-    "dev": "ts-node-dev --respawn app.ts",
+    "start": "node dist/server.js",
+    "dev": "node --watch --loader ts-node/esm src/server.ts",
     "build": "tsc"
   }
 }
